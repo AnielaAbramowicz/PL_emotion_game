@@ -11,7 +11,7 @@ To adaptacyjna gra do rozpoznawania emocji na podstawie mimiki twarzy, zaprojekt
     ```bash
    pip install -r requirements.txt
 3. Uruchom grę:
-    python PL_emotion_game_MANUAL/main.py
+    python PL_emotion_game/main.py
 
 # Angielski/ English 
 
@@ -25,4 +25,4 @@ This is an adaptive facial emotion recognition game designed to support emotion 
    ```bash
    pip install -r requirements.txt
 3. Run the game:
-    python PL_emotion_game_MANUAL/main.py
+    python PL_emotion_game/main.py
