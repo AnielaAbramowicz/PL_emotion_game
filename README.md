@@ -1,4 +1,4 @@
-# PL_emotion_game_MANUAL
+# PL_emotion_game
 
 # Polski/ Polish
 
