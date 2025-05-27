@@ -64,8 +64,11 @@ class TrialScreen:
         end_button.bind("<Button-1>", lambda e: self.root.quit())  # or link to summary screen if you prefer
 
 
-        self.button_blue = ImageTk.PhotoImage(Image.open("/Users/anielamac/Desktop/thesis/visualization/buttom_blue.png").resize((330, 70)))
-        self.button_purple = ImageTk.PhotoImage(Image.open("/Users/anielamac/Desktop/thesis/visualization/button_purple.png").resize((200, 60)))
+        button_blue_raw = Image.open(os.path.join(base_path, "visualization", "buttom_blue.png")).resize((300, 70))
+        self.button_blue = ImageTk.PhotoImage(button_blue_raw)
+
+        button_purple_raw = Image.open(os.path.join(base_path, "visualization", "button_purple.png")).resize((200, 60))
+        self.button_purple = ImageTk.PhotoImage(button_purple_raw)
 
     def render(self):
         self.time_beg = time.time()
