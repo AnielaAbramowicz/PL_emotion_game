@@ -35,11 +35,20 @@ class TrialScreen:
         self.flower_right = ImageTk.PhotoImage(flower_right_raw)
 
         self.correct_answer = "Radość"
-        self.image_path = "/Users/anielamac/Desktop/thesis/visualization/trail_image.jpg"
+        self.image_path = os.path.join(base_path, "visualization", "trail_image.jpg")
 
-        self.score_count = tk.Label(self.main_frame,image=self.button_yellow,  text=f"Punkty: {self.gs.score}", font=("Monocraft", 50), fg=text_color,bg=bg_color, compound="center")
+        button_red_raw = Image.open(os.path.join(base_path, "visualization", "buttom_red.png")).resize((200, 60))
 
-        button_red = ImageTk.PhotoImage(Image.open("/Users/anielamac/Desktop/thesis/visualization/buttom_red.png").resize((200, 60)))
+        
+        self.score_count = tk.Label(
+            self.main_frame,
+            image=self.button_yellow,
+            text=f"Punkty: {self.gs.score}",
+            font=("Monocraft", 50),
+            fg=text_color,
+            bg=bg_color,
+            compound="center"
+        )
 
         end_button = tk.Label(
             self.main_frame,
