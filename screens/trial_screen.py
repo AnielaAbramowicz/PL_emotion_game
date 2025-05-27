@@ -38,7 +38,7 @@ class TrialScreen:
         self.image_path = os.path.join(base_path, "visualization", "trail_image.jpg")
 
         button_red_raw = Image.open(os.path.join(base_path, "visualization", "buttom_red.png")).resize((200, 60))
-
+        self.button_red = ImageTk.PhotoImage(button_red_raw) 
         
         self.score_count = tk.Label(
             self.main_frame,
@@ -52,14 +52,14 @@ class TrialScreen:
 
         end_button = tk.Label(
             self.main_frame,
-            image=button_red,
+            image=self.button_red,
             text="ZAKOŃCZ",
             compound="center",
             font=("Monocraft", 20, "bold"),
             fg=text_color,
             bg=bg_color
         )
-        end_button.image = button_red
+        end_button.image = self.button_red
         end_button.place(relx=1.0, x=-10, y=10, anchor="ne")
         end_button.bind("<Button-1>", lambda e: self.root.quit())  # or link to summary screen if you prefer
 
