@@ -46,8 +46,6 @@ if __name__ == "__main__":
         f.write(f"Age: {age}\nGender: {gender}\n")
     
 
-    #print(tkFont.families())
-        
     base_path = getattr(sys, '_MEIPASS', os.path.abspath("."))
 
     buttom_red_raw = Image.open(os.path.join(base_path, "visualization", "buttom_red.png")).resize((200, 80))
