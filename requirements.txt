@@ -9,3 +9,8 @@ py-feat
 torch
 scikit-learn
 tqdm
+Pillow
+imageio
+requests
+joblib
+pyyaml
