@@ -17,7 +17,7 @@ class GameState:
 
         
         self.df = pd.read_csv(self.csv_path)
-        #print(self.df.head())
+
 
         self.num_questions = num_questions  
 
@@ -66,7 +66,7 @@ class GameState:
 
         # New: adjust center slightly based on performance
         if performance < 0.5:
-            center = max(0.0, last_difficulty - 0.1)  # back off
+            center = max(0.0, last_difficulty - 0.05)  # back off
         elif performance > 0.7:
             center = min(1.0, last_difficulty + 0.05)  # increase slowly
         else:
@@ -76,7 +76,8 @@ class GameState:
         min_scale, max_scale = 0.1, 0.2
         growth_rounds = 5
         change_factor = min_scale + (max_scale - min_scale) * min(self.round, growth_rounds) / growth_rounds
-        low, high = center, min(1.0, performance * change_factor + center)
+
+        low, high = max(center ,0), min(1.0, performance * change_factor + center)
 
         # Filter images in current range and not yet shown
         candidates = self.df[
