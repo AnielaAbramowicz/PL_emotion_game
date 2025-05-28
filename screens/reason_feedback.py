@@ -5,7 +5,7 @@ import os, sys
 
 
 
-CORRECTNESS_RANGE = (0, 2)   
+CORRECTNESS_RANGE = (0, 1)   
 FEELING_RANGE = (-2, 2)  
 TIME_RANGE = (-1, 1)      
 
@@ -13,11 +13,10 @@ frame_color = "#9090EE"     #purple
 bg_color = "#D3EAA6"        # soft pastel green
 text_color = "#0E314A"      # dark blue
 
-def normalize(value, max, min):
-    #maps [min,max] to [0,1]
-    if max == min:
+def normalize(value, min_val, max_val):
+    if max_val == min_val:
         return 0.5
-    return (value-min)/(max-min)
+    return (value - min_val) / (max_val - min_val)
 
 
 
