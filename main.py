@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
     root.deiconify()
     root.title("Gra - rozpoznawanie emocji")
-    root.geometry("1000x650")
+    root.attributes("-fullscreen", True)
 
     game_state = GameState(root,num_questions, session_folder=session_folder)
 
